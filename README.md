@@ -22,6 +22,36 @@ where rank=1
 ### 3. List All Movies Released in a Specific Year (e.g., 2020)
 select*from Netflix
 where release_year =2020
+### 4. Find the Top 5 Countries with the Most Content on Netflix
+select top 5 country, count(*) as total_content
+from(
+select value as country
+from Netflix
+cross apply string_split(country, ','))
+as T1
+where country is not null
+group by country
+order by total_content desc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
