@@ -22,6 +22,7 @@ where rank=1
 ### 3. List All Movies Released in a Specific Year (e.g., 2020)
 select*from Netflix
 where release_year =2020
+
 ### 4. Find the Top 5 Countries with the Most Content on Netflix
 select top 5 country, count(*) as total_content
 from(
@@ -32,6 +33,11 @@ as T1
 where country is not null
 group by country
 order by total_content desc
+
+### 4. Identify the Longest Movie
+select*from Netflix
+where type = 'Movie'
+order by cast(substring(duration,1,CHARINDEX(' ',duration)-1) as Int) desc
 
 
 
