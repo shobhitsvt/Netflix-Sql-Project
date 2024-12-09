@@ -1,6 +1,6 @@
 # Netflix Movies and TV Shows Data Analysis Using SQL
 ![Netflix Logo](https://github.com/shobhitsvt/Netflix-Sql-Project/blob/main/Netflix%20img.avif)
-
+```sql
 CREATE TABLE netflix
 (
     show_id      VARCHAR(5),
@@ -16,18 +16,8 @@ CREATE TABLE netflix
     listed_in    VARCHAR(250),
     description  VARCHAR(550)
 );
+```
 
-select*from [dbo].['Netflix kaggle data$'] as netflix
-
-select type, count(*) from [dbo].['Netflix kaggle data$']
-group by show_id
-EXEC sp_rename 'dbo.Netflix kaggle data$','Netflix';
-SELECT * FROM sys.tables WHERE name = 'Netflix kaggle data$';
-Use Netflix
-Go
-
-EXEC sp_rename 'dbo.Netflix', 'Netflix';
-select*from Netflix
 ### 1. Count the Number of Movies vs TV Shows
 ```sql
 select count(case when type='Movie' then 1 end) as Moviecount,
