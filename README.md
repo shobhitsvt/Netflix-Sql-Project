@@ -1,5 +1,5 @@
 <p align="center">
-# Netflix Movies and TV Shows Data Analysis Using SQL
+<H1>Netflix Movies and TV Shows Data Analysis Using SQL</H1>
 </p>
 <p align="center">
   <img src="https://github.com/shobhitsvt/Netflix-Sql-Project/blob/main/Netflix%20img.avif" alt="Netflix Picture" />
