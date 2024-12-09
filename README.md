@@ -1,4 +1,4 @@
-                                 # Netflix Movies and TV Shows Data Analysis Using SQL
+   # Netflix Movies and TV Shows Data Analysis Using SQL
 ## Business Problems and Solutions
 
 ### 1. Count the Number of Movies vs TV Shows
