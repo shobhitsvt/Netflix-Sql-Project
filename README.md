@@ -125,20 +125,22 @@ Offset 0 rows fetch next 5 rows only
 ```sql
 select*from Netflix
 where listed_in like '%Documentaries'
-
- ---Find All Content Without a Director
- select*from Netflix
- where director is null
 ```
 
-### 12. Find How Many Movies Actor 'Salman Khan' Appeared in the Last 10 Years
+### 12. Find All Content Without a Director
+```sql
+select*from Netflix
+where director is null
+```
+
+### 13. Find How Many Movies Actor 'Salman Khan' Appeared in the Last 10 Years
  ```sql
  select*from Netflix
  where casts like '%Salman Khan%'
  and release_year> year(getdate())-10
 ```
 
-### 13. Find the Top 10 Actors Who Have Appeared in the Highest Number of Movies Produced in India
+### 14. Find the Top 10 Actors Who Have Appeared in the Highest Number of Movies Produced in India
 ```sql
 select top 10 value as actor, count(*) as total_appearances 
 from Netflix
@@ -148,7 +150,7 @@ group by value
 Order by total_appearances desc
 ```
 
-### 14. Categorize Content Based on the Presence of 'Kill' and 'Violence' Keywords
+### 15. Categorize Content Based on the Presence of 'Kill' and 'Violence' Keywords
 ```sql
 select category, count(*) as content_Count from
 (select case when description like '%kill%' or description like '%Violence%' then 'Bad' else 'Good' end as Category
